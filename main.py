@@ -79,13 +79,13 @@ def shop(listings, m_listing):
     while True:
         os.system('cls')
         print(Color.HEADER + Color.BOLD + "SHOP" + Color.END)
-        print(f"{Color.PEBBLE}₲{save_data["statistics"]["pebbles"]}{Color.END}\n")
+        print(f"{Color.PEBBLE}₲{save_data['statistics']['pebbles']}{Color.END}\n")
         line_1 = ""
         line_2 = ""
         line_1_length = 0
         line_2_length = 0
         for i, (listing, listing_data) in enumerate(listings.items(), start=1):
-            listing_text = (f"{i}. {listing} Pack [₲{listing_data["price"]}]" if listing_data["purchased"] == False else Color.ITALIC + Color.GRAY + f"{i}. {listing} Pack [Purchased]" + Color.END)
+            listing_text = (f"{i}. {listing} Pack [₲{listing_data['price']}]" if listing_data["purchased"] == False else Color.ITALIC + Color.GRAY + f"{i}. {listing} Pack [Purchased]" + Color.END)
             if i == 1:
                 line_1 += listing_text
                 line_1_length += len(line_1)
@@ -103,7 +103,7 @@ def shop(listings, m_listing):
                     line_2 += " " * (line_1_length - line_2_length)
                 line_1 += "   " + listing_text
         if m_listing:
-            listing_text = (f"4. {m_listing["name"]} Pack(M) [₲{m_listing["price"]}]" if m_listing["purchased"] == False else Color.ITALIC + Color.GRAY + f"4. {m_listing["name"]} Pack [Purchased]" + Color.END)
+            listing_text = (f"4. {m_listing['name']} Pack(M) [₲{m_listing['price']}]" if m_listing["purchased"] == False else Color.ITALIC + Color.GRAY + f"4. {m_listing['name']} Pack [Purchased]" + Color.END)
             line_2 += "   " + listing_text
         print(line_1 + "\n")
         print(line_2)
@@ -166,9 +166,9 @@ def inner_encyclopedia(item : bool):
                         os.system('cls')
                         for thing_name, thing in pack_unlocked[int(choice)][1].items():
                             if item:
-                                print(Color.BOLD + Color.HEADER + f"{thing_name}" + Color.END + f"\nDamage: {thing["Damage"] if save_data["items"][thing_name]["used"] else "?"}\nLore: {thing["Lore"]}\n")
+                                print(Color.BOLD + Color.HEADER + f"{thing_name}" + Color.END + f"\nDamage: {thing['Damage'] if save_data['items'][thing_name]['used'] else '?'}\nLore: {thing['Lore']}\n")
                             else:
-                                print(Color.BOLD + Color.HEADER + f"{thing_name}" + Color.END + f"\nValue: {thing["Value"] if save_data["modifiers"][thing_name]["used"] else "?"}\nTag: {thing["Tag"]}\nLore: {thing["Lore"]}\n")
+                                print(Color.BOLD + Color.HEADER + f"{thing_name}" + Color.END + f"\nValue: {thing['Value'] if save_data['modifiers'][thing_name]['used'] else '?'}\nTag: {thing['Tag']}\nLore: {thing['Lore']}\n")
                             time.sleep(0.01)
                         choice = input()
             except:
@@ -179,15 +179,15 @@ def altar():
         os.system("cls")
         for i, (name, data) in enumerate(relic_data.items(), start=1):
             if name in save_data["equipped_r"]:
-                print(f"{Color.BOLD}{Color.RAINBOW(f"{i}. Relic of {name}")}")
-                print(f"   {Color.ITALIC}{data["Lore"]}{Color.END}\n")
+                print(f"{Color.BOLD}{Color.RAINBOW(f'{i}. Relic of {name}')}")
+                print(f"   {Color.ITALIC}{data['Lore']}{Color.END}\n")
             elif save_data["relics"][name]["unlocked"] == True:
                 print(f"{i}. Relic of {name}")
-                print(f"   {Color.GRAY}{Color.ITALIC}{data["Lore"]}{Color.END}\n")
+                print(f"   {Color.GRAY}{Color.ITALIC}{data['Lore']}{Color.END}\n")
             else:
                 print(f"{Color.GRAY}{Color.ITALIC}{i}. Relic of {name} [LOCKED]{Color.END}")
-                print(f"   {Color.GRAY}{Color.ITALIC}{data["Unlock"]}{Color.END}\n")
-        print(f"Pebble Multiplier: {Color.MULT}X{len(save_data["equipped_r"]) + 1}{Color.END}")
+                print(f"   {Color.GRAY}{Color.ITALIC}{data['Unlock']}{Color.END}\n")
+        print(f"Pebble Multiplier: {Color.MULT}X{len(save_data[equipped_r]) + 1}{Color.END}")
         print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         for i, (name, data) in enumerate(relic_data.items(), start=1):
@@ -208,14 +208,14 @@ def statistics():
     while True:
         os.system("cls")
         print(f"{Color.BOLD}{Color.HEADER}Stats{Color.END}")
-        print(f"\nGourd Pebbles:\n{save_data["statistics"]["pebbles"]}")
-        print(f"\nGourd Seeds:\n{save_data["statistics"]["seeds"]}")
-        print(f"\nTotal Rolls:\n{save_data["statistics"]["total rolls"]}")
+        print(f"\nGourd Pebbles:\n{save_data['statistics']['pebbles']}")
+        print(f"\nGourd Seeds:\n{save_data['statistics']['seeds']}")
+        print(f"\nTotal Rolls:\n{save_data['statistics']['total rolls']}")
         print(f"\n{Color.BOLD}{Color.HEADER}Bosses{Color.END}")
         for boss, temp_data in save_data["bosses"].items():
-            print(f"\n{boss if temp_data["kills"] > 0 else f"{Color.GRAY}{Color.ITALIC}???{Color.END}"}")
-            print(f"{f"{Color.GRAY}{Color.ITALIC}{boss_data[boss]["Lore"]}{Color.END}" if temp_data["kills"] > 0 else f"{Color.GRAY}{Color.ITALIC}???{Color.END}"}")
-            print(f"{Color.GRAY}{Color.ITALIC}Defeated: {temp_data["kills"]}{Color.END}")
+            print(f"\n{boss if temp_data['kills'] > 0 else f'{Color.GRAY}{Color.ITALIC}???{Color.END}'}")
+            print(f"""{f"{Color.GRAY}{Color.ITALIC}{boss_data[boss]['Lore']}{Color.END}" if temp_data["kills"] > 0 else f"{Color.GRAY}{Color.ITALIC}???{Color.END}"}""")
+            print(f"{Color.GRAY}{Color.ITALIC}Defeated: {temp_data['kills']}{Color.END}")
         print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         if choice.lower() == "exit":
@@ -274,7 +274,7 @@ while True:
             else:
                 rollable = False
         os.system('cls')
-        stats_bar = f"|| {Color.PEBBLE}₲{save_data["statistics"]["pebbles"]}{Color.END} | {Color.SEED}{save_data["statistics"]["seeds"]} Gourd Seeds{Color.END} ||"
+        stats_bar = f"|| {Color.PEBBLE}₲{save_data['statistics']['pebbles']}{Color.END} | {Color.SEED}{save_data['statistics']['seeds']} Gourd Seeds{Color.END} ||"
         print("—" * (len(stats_bar) - 29))
         print(stats_bar)
         print("—" * (len(stats_bar) - 29))
@@ -394,7 +394,7 @@ while True:
                     full_picks_m.append((modifier_name, modifier_obj))
 
         if len(save_data["equipped"]) + len(save_data["equipped_m"]) == len(item_data.keys()) + len(modifier_data.keys()):
-            full_picks.append((f"{Color.RAINBOW("???")}", { "Damage": 50, "Lore": "..." }))
+            full_picks.append((f"{Color.RAINBOW('???')}", { "Damage": 50, "Lore": "..." }))
 
         # Weapon/modifier picking logic for gourd
 
@@ -445,7 +445,7 @@ while True:
                 g_total_damage = 50
                 repeat = 5
 
-            g_weapon_name_full = (f"{f"{Color.GRAY}{Color.ITALIC}???{Color.END}" if "The Blind" in save_data["equipped_r"] else f"{Color.BOLD}{Color.HEADER}{g_modifier_name}"} " if g_modifier_name else f"{Color.BOLD}{Color.HEADER}") + f"{g_weapon_pick_name}{Color.END}"
+            g_weapon_name_full = (f"""{f"{Color.GRAY}{Color.ITALIC}???{Color.END}" if "The Blind" in save_data["equipped_r"] else f"{Color.BOLD}{Color.HEADER}{g_modifier_name}"} """ if g_modifier_name else f"{Color.BOLD}{Color.HEADER}") + f"{g_weapon_pick_name}{Color.END}"
             if g_modifier_name == "":
                 g_weapon_prefix = " an " if g_weapon_pick_name[0].lower() in vowels else " a "
             else:
@@ -484,7 +484,7 @@ while True:
             
             for i, ((modifier_name, modifier), (weapon_name, weapon)) in enumerate(zip(modifier_picks, weapon_picks), start=1):
                 audio.play_audio("GourdWeaponSelect")
-                bh.timed_print(f"{i}. " + (f"{f"{Color.GRAY}{Color.ITALIC}???{Color.END}" if "The Blind" in save_data["equipped_r"] else modifier_name} " if modifier_name else "") + weapon_name, 500)
+                bh.timed_print(f"{i}. " + (f"""{f"{Color.GRAY}{Color.ITALIC}???{Color.END}" if "The Blind" in save_data["equipped_r"] else modifier_name} """ if modifier_name else "") + weapon_name, 500)
                 damage = bh.estimate_damage(modifier, weapon)
                 if modifier["Tag"] == "Spec":
                     damage = bh.special_weapon(modifier_name, weapon)
@@ -552,7 +552,7 @@ while True:
         damage = total_damage
         time.sleep(1)
         audio.play_audio("GourdSwing")
-        bh.timed_print(f"You swing at the {current_gourd} with the " + Color.BOLD + f"{f"{Color.GRAY}{Color.ITALIC}??? {Color.END}" if "The Blind" in save_data["equipped_r"] and modifier_name != "" else modifier_name}{weapon_name}" + Color.END)
+        bh.timed_print(f"You swing at the {current_gourd} with the " + Color.BOLD + f"""{f"{Color.GRAY}{Color.ITALIC}??? {Color.END}" if "The Blind" in save_data["equipped_r"] and modifier_name != "" else modifier_name}{weapon_name}""" + Color.END)
         if "Golden" in modifier_name:
             mult = random.uniform(1.1, 1.5)
         elif "Midas" in modifier_name:
