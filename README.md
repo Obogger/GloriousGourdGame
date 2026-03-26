@@ -5,7 +5,8 @@ This is an awesome console game about Gourds, Balls and really cool Weapons.
 1. Download zip
 2. Unzip
 3. Rename save_data.example.json to save_data.json
-4. Run Main.py (Through VSCode or whatever you use, there's no .exe right now)
+4. Download Pygame if you don't have it (pip install pygame in console)
+5. Run Main.py (Through VSCode or whatever you use, there's no .exe right now)
 
 ## Future Changes
 The game currently is very horribly made and A LOT of changes are planned and are going to be made, but if you have ideas for balancing, gameplay or anything else, be sure to contact me.
