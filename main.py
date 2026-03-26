@@ -60,6 +60,7 @@ def deck_builder():
                 print(f"{i+1}. {available_packs[i]} Pack {"[ON]" if available_packs[i] in save_data["equipped"] else ""}")
             else:
                 print(f"{i+1}. {available_packs_m[i - len(available_packs)]} Pack(M) {"[ON]" if available_packs_m[i - len(available_packs)] in save_data["equipped_m"] else ""}")
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         if choice.lower() == "exit":
             break
@@ -106,6 +107,7 @@ def shop(listings, m_listing):
             line_2 += "   " + listing_text
         print(line_1 + "\n")
         print(line_2)
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         for i, (listing, listing_data) in enumerate(listings.items(), start=1):
             try:
@@ -133,6 +135,7 @@ def encyclopedia():
     while True:
         os.system('cls')
         print(f"1. Item Packs\n2. Modifier Packs [WIP]")
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         if choice == "1":
             inner_encyclopedia(True)
@@ -152,6 +155,7 @@ def inner_encyclopedia(item : bool):
             else:
                 print(f"{i}. ???")
                 pack_unlocked[i] = (False, pack_data)
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         if choice.lower() == "exit":
             break
@@ -184,6 +188,7 @@ def altar():
                 print(f"{Color.GRAY}{Color.ITALIC}{i}. Relic of {name} [LOCKED]{Color.END}")
                 print(f"   {Color.GRAY}{Color.ITALIC}{data["Unlock"]}{Color.END}\n")
         print(f"Pebble Multiplier: {Color.MULT}X{len(save_data["equipped_r"]) + 1}{Color.END}")
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         for i, (name, data) in enumerate(relic_data.items(), start=1):
             try:
@@ -211,6 +216,7 @@ def statistics():
             print(f"\n{boss if temp_data["kills"] > 0 else f"{Color.GRAY}{Color.ITALIC}???{Color.END}"}")
             print(f"{f"{Color.GRAY}{Color.ITALIC}{boss_data[boss]["Lore"]}{Color.END}" if temp_data["kills"] > 0 else f"{Color.GRAY}{Color.ITALIC}???{Color.END}"}")
             print(f"{Color.GRAY}{Color.ITALIC}Defeated: {temp_data["kills"]}{Color.END}")
+        print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         if choice.lower() == "exit":
             break
