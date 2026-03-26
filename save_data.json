@@ -18,9 +18,14 @@
 
     ],
     "packs": {
+        "Beginner": {
+            "unlocked": true
+        }
     },
     "packs_m": {
-
+        "Beginner": {
+            "unlocked": true
+        }
     },
     "items": {
         
