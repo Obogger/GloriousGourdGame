@@ -1,0 +1,179 @@
+{
+    "Beginner": {
+        "Large": {
+            "Value": 1.5,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Small": {
+            "Value": 0.5,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Inverse": {
+            "Value": -1,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Fortified": {
+            "Value": 2,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Defortified": {
+            "Value": -2,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Golden": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        }
+    },
+
+    "Gambler's": {
+        "Gambling": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Shiny": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Rusty": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Thriving": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Moldy": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Lucky": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        }
+    },
+
+    "Extreme": {
+        "Massive": {
+            "Value": 2.0,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Tiny": {
+            "Value": 0.25,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Gargantuan": {
+            "Value": 3.0,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Miniscule": {
+            "Value": 0.1,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Explosive": {
+            "Value": 5.0,
+            "Tag": "Mult",
+            "Lore": ""
+        },
+        "Unbalanced": {
+            "Value": 0.2,
+            "Tag": "Mult",
+            "Lore": ""
+        }
+    },
+
+    "Armor": {
+        "Shielded": {
+            "Value": 4,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Shattered": {
+            "Value": -4,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Walled In": {
+            "Value": 6,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Porseline": {
+            "Value": -6,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Intellectually Gifted": {
+            "Value": 8,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Intellectually Stunted": {
+            "Value": -8,
+            "Tag": "Add",
+            "Lore": ""
+        }
+    },
+
+    "Religious": {
+        "Holy": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Unholy": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Demonic": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Midas": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        }
+    },
+
+    "Blacksmith": {
+        "Sharp": {
+            "Value": 0.1,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Dull": {
+            "Value": -0.1,
+            "Tag": "Add",
+            "Lore": ""
+        },
+        "Hyperdense": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        },
+        "Holographic": {
+            "Value": 0,
+            "Tag": "Spec",
+            "Lore": ""
+        }
+    }
+}

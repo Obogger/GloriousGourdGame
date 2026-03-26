@@ -1,0 +1,26 @@
+{
+    "The Empty": {
+        "Unlock": "Beat roll 30",
+        "Lore": "Travel lightly..."
+    },
+    "The Blind": {
+        "Unlock": "Deal over 50 damage on a boss",
+        "Lore": "You are blind to change..."
+    },
+    "Greed": {
+        "Unlock": "Get 5 seeds from one enemy",
+        "Lore": "Consume for profit..."
+    },
+    "The Sisters": {
+        "Unlock": "...",
+        "Lore": "Bound together, eternally..."
+    },
+    "Broken Chains": {
+        "Unlock": "...",
+        "Lore": "Gain in a broken world..."
+    },
+    "Change": {
+        "Unlock": "Beat 5 rolls in a row without modifiers",
+        "Lore": "State of constant change..."
+    }
+}
