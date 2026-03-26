@@ -187,7 +187,7 @@ def altar():
             else:
                 print(f"{Color.GRAY}{Color.ITALIC}{i}. Relic of {name} [LOCKED]{Color.END}")
                 print(f"   {Color.GRAY}{Color.ITALIC}{data['Unlock']}{Color.END}\n")
-        print(f"Pebble Multiplier: {Color.MULT}X{len(save_data[equipped_r]) + 1}{Color.END}")
+        print(f"Pebble Multiplier: {Color.MULT}X{len(save_data['equipped_r']) + 1}{Color.END}")
         print(f"{Color.GRAY}{Color.ITALIC}Type 'exit' to leave{Color.END}")
         choice = input(">")
         for i, (name, data) in enumerate(relic_data.items(), start=1):
