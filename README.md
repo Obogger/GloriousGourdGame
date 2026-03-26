@@ -16,6 +16,9 @@ The game is originally based around being as annoying as possible and evolved in
 
 Have fun playing Glorious Gourd Game :)
 
+## Credits
+Lirrez - Town Theme
+
 >"The greatest gourd is the gourd yet harvested"
 >
 >\- John Calender
