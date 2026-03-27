@@ -23,7 +23,7 @@ def estimate_damage(modifier, weapon):
         return weapon["Damage"] + modifier["Value"]
     else:
         return weapon["Damage"]
-    
+
 def special_weapon(modifier, weapon):
     if modifier == "Gambling":
         return weapon["Damage"] * 0 if random.randint(0, 1) == 0 else 100
@@ -40,6 +40,7 @@ def special_weapon(modifier, weapon):
     else:
         return weapon["Damage"]
     
+
 def defeated(pebbles):
     os.system("cls")
     print(r"""
