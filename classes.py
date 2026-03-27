@@ -174,7 +174,8 @@ class Color:
     DAMAGE = '\033[48:5:88m'
     MULT = '\033[48:5:53m'
 
-    def RAINBOW(self, text, start=-1):
+    @staticmethod
+    def RAINBOW(text, start=-1):
         rainbow_parts = ["\033[38:5:196m", #RED
                      "\033[38:5:202m", #RED-ORANGE
                      "\033[38:5:208m", #ORANGE

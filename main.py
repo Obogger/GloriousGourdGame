@@ -7,7 +7,6 @@
 """
 
 import time
-import os
 import random
 import math
 import backend_handler as bh
@@ -343,7 +342,7 @@ def run():
 
             bh.clear_screen()
             if rolls > 0 and rolls % 5 == 0:
-                bh.timed_print(f"Do you which to leave with all your scavenged loot? (Y / N)")
+                bh.timed_print("Do you which to leave with all your scavenged loot? (Y / N)")
                 choice = input(">")
                 if choice.lower() == "y":
 
@@ -351,7 +350,7 @@ def run():
                     game_data.add_pebbles(current_pebbles)
                     game_data.add_seeds(current_seeds)
                     bh.clear_screen()
-                    bh.slow_text(f"You return safely back to Town.")
+                    bh.slow_text("You return safely back to Town.")
                     time.sleep(1)
                     bh.timed_print(f"+ {Color.PEBBLE}₲{current_pebbles}{Color.END}", 500)
                     bh.timed_print(f"+ {Color.SEED}{current_seeds} Gourd Seeds{Color.END}\n", 500)
@@ -459,9 +458,9 @@ def run():
             bh.clear_screen()
             bh.timed_print(f"{Color.BOLD}ROLL {rolls + 1}{Color.END}\n")
             audio.play_audio("GourdBallRoll")
-            bh.timed_print(f"The Ball is rolling", 3000)
+            bh.timed_print("The Ball is rolling", 3000)
             audio.play_audio("GourdBallRoll")
-            bh.timed_print(f"The Ball continues to roll", 3000)
+            bh.timed_print("The Ball continues to roll", 3000)
             audio.play_audio("GourdHit")
             bh.timed_print(f"The Ball has collided with the {current_gourd}", 2000)
             audio.play_audio("GourdFinalWeapon")
